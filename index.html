@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>RebelField</title>
+</head>
+<body id="bodyContainer">
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">RebelField</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">RebelField</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="col-md-8 mx-auto text-center">
+    <section>
+        <h1>RebelField</h1>
+        <h2>Organiza, agrega y modifica</h2>
+        <p>Agrega valor y visión a tus proyectos con un sólo click</p>
+        <div class="buttonContainer p-3">
+            <button type="buttonContainer__button" class="btn btn-primary ">Comienza ahora</button>
+
+        </div>
+
+        
+    </section>
+</main>
+
+<div id="articleIndex" class="text-center d-flex gap-3">
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <i class="bi bi-clipboard2-data-fill" style="font-size:6.5rem"></i>
+          <h5 class="card-title">Soporte Android</h5>
+          <h6 class="card-subtitle mb-2">5.0 en adelante</h6>
+          <p class="card-text">Compatible con sistemas Android, permitirá compartir y exportar tus proyectos a tu dispositivo, con el fin de mantenerte
+            sincronizado en todo momento.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <i class="bi bi-badge-8k-fill"style="font-size: 6.5rem;"></i>
+          <h5 class="card-title">UDH8K Soportado</h5>
+          <h6 class="card-subtitle mb-2">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <i class="bi bi-browser-chrome" style="font-size: 6.5rem;"></i>
+          <h5 class="card-title">Navegation First</h5>
+          <h6 class="card-subtitle mb-2">Ingresa desde cualquier navegador</h6>
+          <p class="card-text">El diseño responsive te permitirá ingresar desde cualquier dispositivo que cuente con un navegador chrome.</p>
+
+        </div>
+      </div>
+</div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

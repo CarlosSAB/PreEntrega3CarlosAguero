@@ -1,0 +1,535 @@
+/*CONFIGURACION GENERAL*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+
+
+}
+
+/*Se definen los grids*/
+.gridContainer {
+    display: grid;
+    grid-template-areas:
+        "navbar"
+        "section"
+        "main"
+        "footer";
+
+    grid-template:
+        "navbar" 60px
+        "main" 200px
+        "section" auto
+        "footer" 60px;
+
+}
+
+/*Estilos para el navbar general*/
+
+.navbar {
+    background-color: #1c57d6;
+    grid-area: navbar;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: 'Roboto';
+    color:white;
+
+}
+
+.navbarUl{
+    display:none;
+    
+}
+
+.navbarLi{
+    list-style: none;
+    margin: 10px 20px;
+
+    
+}
+
+
+.navbarLogo{
+    font-size:1.3rem;
+    
+}
+.menuIcon{
+    width: 30px;
+    height: 30px;
+}
+
+.navbarEnlace{
+    text-decoration: none;
+    color:white;
+
+}
+
+/*Estilos para el main de inicio*/
+
+.main {
+
+    grid-area: main;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+
+    font-family: 'Poppins';
+
+
+}
+
+.mainH1 {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 10px;;
+}
+
+.mainH2{
+    font-size:1rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el section de inicio*/
+.section {
+
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imagenFondo {
+    width: 80%;
+    height: auto;
+}
+
+/*Estilo de los botones*/
+.botonMain {
+    border: none;
+    background-color: #0f8bffec;
+    font-weight: bold;
+    color: white;
+    margin: 20px 0;
+    display:none;
+    padding: 10px 30px;
+    border-radius: 6px;
+    transition: transform 0.3s;
+
+}
+
+.botonMain:hover {
+    background-color: #0864bbec;
+    cursor:pointer;
+    
+}
+
+.botonMain:active {
+    transform: scale(1.1);
+    
+}
+
+.botonMain2 {
+    border: none;
+    background-color: #0f8bffec;
+    font-weight: bold;
+    color: white;
+    margin: 40px 0;
+    transition: transform 0.2s;
+    padding: 15px 30px;
+    border-radius: 6px;
+
+}
+
+.botonMain2:hover {
+    background-color: #0864bbec;
+    cursor:pointer;
+    
+}
+
+.botonMain2:active {
+    transform: scale(1.1);
+    
+}
+
+/*Estilos del footer de inicio*/
+
+.footer {
+
+    grid-area: footer;
+
+    font-family: 'Roboto';
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerParagraph,
+.footerParagraph2 {
+    font-size: 0.7rem;
+}
+
+
+/*Definición de media queries para desktop*/
+@media (min-width: 900px) {
+    .gridContainer {
+        grid-template:
+            "navbar navbar" 60px
+            "main section" auto
+            "footer footer" 80px/
+            40% 60%;
+    }
+    /*Cambios en navbar*/
+    .navbar{
+        padding:0 40px;
+    }
+    .menuIcon{
+        display:none;
+    }
+    .navbarUl{
+        display:flex;
+        
+    }
+
+    .navbarEnlace {
+        color: white;
+        border-radius: 30px;
+        transition: background-color 0.3s, padding 0.3s, color 0.3s;
+    }
+    
+    .navbarEnlaceInicio{
+        padding:10px;
+        border-radius: 30px;
+        background-color: white;
+        color:black;
+        text-decoration: none;
+    }
+
+
+    .navbarEnlace:hover {
+        padding: 10px;
+        border-radius: 30px;
+        background-color: white;
+        color:black;
+    }
+
+    .navbarEnlace:hover{
+        padding:5px 10px;
+        background-color: white;
+        color:black;
+    }
+
+    /* Cambios en main*/
+    .main{
+        align-items: start;
+        justify-content: center;
+        padding:0 10%;
+    }
+
+    .mainH1{
+        font-size:5rem;
+        line-height:70px;
+        margin-bottom: 10px;
+        text-align: left;
+
+    }
+    .botonMain {
+        display:flex;
+    }
+
+    .botonMain2 {
+        display:none;
+    }
+
+    /*Cambios en section*/
+    .section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .imagenFondo {
+        width: 80%;
+        height: auto;
+
+    }
+    /*Cambios en footer*/
+    .footerParagraph,
+    .footerParagraph2 {
+        font-size: 0.7rem;
+    }
+
+
+}
+
+
+/*ESTILOS PARA PLANES*/
+
+
+.gridContainer_planes {
+    display: grid;
+    grid-template-areas:
+        "navbar"
+        "sectionP"
+        "mainP"
+        "footerP";
+
+    grid-template:
+        "navbar" 60px
+        "mainP" 200px
+        "sectionP" auto
+        "footerP" auto;
+
+}
+
+.mainPlanes{
+    grid-area:"main";
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 30px 20px;
+    color:white;
+    font-family: 'Roboto';
+      
+}
+
+.mainH1P{
+    font-size:4rem;
+}
+
+.mainH2{
+    font-size:1rem;
+    margin-bottom: 10px;
+}
+
+.sectionP{
+    grid-area:sectionP;
+
+    display:flex;
+    flex-direction: column;
+    gap:40px;
+    align-items: center;
+    padding: 20px 0;
+
+}
+
+/*Estilos de las cards*/
+
+.cardContainer{
+
+    width: 300px;
+    height: 400px;
+    background-color:white;
+    border-radius: 10px;
+    font-family:'Roboto';
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 2.5rem;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    
+}
+
+.imageCard{
+display:Flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+.carro_1{
+    margin-top:20px;
+    width:90%;
+    height:auto;
+}
+
+.carro_3{
+    
+    width: 90%;
+    height: auto;
+}
+
+.titleContainer{
+
+    padding:20px 45px;
+}
+
+.cardTitle{
+    
+    font-size: 1.5rem;
+    
+    
+}
+
+.cardParagraph{
+    
+    padding-bottom: 10px;
+    font-size:0.9rem;
+    color:rgb(105, 104, 104)
+
+}
+
+.cardButton{
+    
+    background-color:#1c57d6;
+    border:none;
+    color:white;
+    padding:10px 73px;
+    border-radius: 6px;
+    margin:0 auto;
+    display:block;}
+
+/*Estilos del footer planes*/
+
+.footerP{
+        grid-area: footerP;
+        background-color: #000000;
+        display:Flex;
+        flex-direction: column;
+        font-family: 'Poppins';
+    }
+
+.footer_title{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding:0 2rem;
+}
+    
+.footer-content{
+        padding:40px 0;
+
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+.footer-content h3{
+        font-size:60px;
+        color:white;
+}
+    
+.footer-content p{
+        color:white;
+        margin-bottom: 2rem;
+}
+    
+.formulario {
+        max-width: 400px;
+
+    
+}
+    
+.formulario label {
+        display: block; 
+        margin-bottom: 5px; 
+        color:White;
+}
+    
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+        width: 100%; 
+        padding: 10px;
+        margin-bottom: 10px; 
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+}
+    
+    
+.formulario .botonForm {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+}
+    
+.formulario .botonForm:hover {
+        background-color: #0056b3;
+}
+
+/* Estilos para la tarjeta */
+
+
+@media (min-width: 900px) {
+    .gridContainer_planes {
+        grid-template:
+            "navbar" 60px
+            "mainP" auto
+            "sectionP"auto
+            "footerP" auto/
+            100%;
+    }
+    
+    .navbar{
+        padding:0 40px;
+    }
+    .menuIcon{
+        display:none;
+    }
+    .navbarUl{
+        display:flex;
+    }
+
+    .sectionP{
+
+        display:Flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 40px;
+
+    }
+    
+
+    .footerP{
+        flex-direction:row;
+    }
+
+    .footer-content{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .footer_title{
+        align-items: start;
+    }
+
+    
+}
+
+
+
+
+

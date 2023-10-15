@@ -1,0 +1,39 @@
+main{
+
+    color:white;
+    // background-color: red;
+    width: 100%;
+    margin:70px 0;
+
+}
+
+.buttonContainer{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+#articleIndex{
+    height: 100vh;
+
+    padding:40px 40px;
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    .card{
+
+        max-height: 400px;
+        color:White;
+        background-color: transparent !important;
+        border:3px solid white;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        .card-subtitle{
+            color:rgba(255, 255, 255, 0.404);
+        }
+    }
+}
